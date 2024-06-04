@@ -1,0 +1,21 @@
+<html>
+    <h2>Final Result</h2>
+    <body>
+        {# A persion has  {{ result }} and the marks is {{score}} 
+        {% if result >= 50 %}
+        <h1>Your result is pass</h1>
+        {% else %}
+        <h1>Your result is fail</h1>
+        {% endif %}
+        #}
+
+        <table border=2>
+            {% for key,value in result.items() %}
+                <tr>
+                    <th>{{ key }}</th>
+                    <th>{{ value }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
